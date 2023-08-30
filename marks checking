@@ -1,0 +1,17 @@
+amount_three = 0
+amount_five = 0
+amount_four = 0
+marks = []
+mark = int(input("Введіть оцінку (0 - зупинити введення):"))
+while mark != 0:
+    if mark == 5:
+        amount_five += 1
+    if mark == 4:
+        amount_four += 1    
+    if mark == 3:
+        amount_three += 1    
+    marks.append(mark)
+    mark = int(input("Введіть оцінку (0 - зупинити введення):"))   
+know  = (amount_five + amount_four + amount_three) / len(marks) * 100
+print("Список оцінок:", marks)
+print("Успішність:", know)
